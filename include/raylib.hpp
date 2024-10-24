@@ -14,6 +14,13 @@ extern "C" {
 
 #include RAYLIB_H_FILE // NOLINT
 
+#ifdef near
+ #undef near
+#endif
+#ifdef far
+ #undef far
+#endif
+
 #if !defined(RAYLIB_VERSION_MAJOR) || !defined(RAYLIB_VERSION_MINOR)
 #error "raylib-cpp requires raylib >= 5"
 #endif
